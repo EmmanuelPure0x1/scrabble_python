@@ -1,3 +1,4 @@
+# Parent Class Creation
 class NumbersLetters:
     def __init__(self):
         self.one = ["a", "e", "i", "o", "u", "l", "n", "r", "s", "t"]
@@ -8,17 +9,8 @@ class NumbersLetters:
         self.eight = ["j", "x"]
         self.ten = ["q", "z"]
 
-        # # I am going to create the letter arrays which will be stored in variables
-        # # These are the arrays.
-        # one = ["A", "E", "I", "O", "U", "L", "N", "R", "S", "T"]
-        # two = ["D", "G"]
-        # three = ["B", "C", "M", "P"]
-        # four = ["F", "H", "V", "W", "Y"]
-        # five = ["K"]
-        # eight = ["J", "X"]
-        # ten = ["Q", "Z"]
-
-    # line 13 is the declaration of a function called: word_calc and it will take a str which it will pass      as word
+    # line 11 is the declaration of a function called: word_calc and it will take a str which it will pass as word
+class Calculator(NumbersLetters):
     def word_calc(self, word):
 
         # This is a variable which has been given the value of 0
@@ -28,7 +20,7 @@ class NumbersLetters:
         for i in word:
             # for each letter in the word the loop is iterating and evaluating which section it belongs to.
             if i in self.one:
-                # line below looks at whether the letter is in array called 'one' and +1 to letter count var if it is.
+            # line below looks at whether the letter is in array called 'one' and +1 to letter count var if it is.
                 letter_count += 1
             elif i in self.two:
                 letter_count += 2
@@ -45,5 +37,5 @@ class NumbersLetters:
 
         return letter_count
 
-word = NumbersLetters()
-print(word.word_calc('zoooo'))
+word = Calculator()
+print(word.word_calc('The quick brown fox jumps over the lazy dog')) #This call checks for the characters provided and the and does the scrabble addition.
