@@ -2,7 +2,7 @@
 
 - Given the below scoring create a Scrabble word calculator that will provide the correct scores dependent on the string provided. 
 
- ```text
+```
 Letter                             Value
 A, E, I, O, U, L, N, R, S, T       1
 D, G                               2
